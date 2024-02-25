@@ -27,7 +27,16 @@
       -webkit-transform: scale(0.0001) rotateZ(360deg);
     }
     100% {
-      -webkit-transform: scale(0.99) rotateZ(-360deg);
+      -webkit-transform: scale(1) rotateZ(-360deg);
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .answered {
+    padding: 0px 1rem;
+    &__gif {
+      width: 100%;
     }
   }
 }

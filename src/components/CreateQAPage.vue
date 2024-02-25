@@ -111,5 +111,15 @@ function copyLink() {
   &__button {
     @extend %button;
   }
+
+  @media screen and (max-width: 425px) {
+    &__inputs-container {
+      flex-direction: column;
+    }
+
+    &__button-container {
+      flex-direction: column;
+    }
+  }
 }
 </style>

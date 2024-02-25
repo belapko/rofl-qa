@@ -41,6 +41,7 @@ function setButtonCords(cords: ReturnType<typeof generateRandomCords>): void {
       ref="movableButtonRef"
       :style="{ top: buttonPosition.fromTop + 'px', left: buttonPosition.fromLeft + 'px' }"
       @mouseover="setButtonCords(generateRandomCords())"
+      @click="setButtonCords(generateRandomCords())"
     >
       {{ urlParams.wrong }}
     </button>
@@ -79,9 +80,15 @@ function setButtonCords(cords: ReturnType<typeof generateRandomCords>): void {
       position: absolute;
       transition: all ease-in-out 0.1s;
       &:hover {
-        cursor: not-allowed;
-        background-color: $color-blue;
+        cursor: not-allowed !important;
+        background-color: $color-blue !important;
       }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    &__title {
+      font-size: 2rem;
     }
   }
 }
