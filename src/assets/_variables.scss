@@ -1,0 +1,22 @@
+$color-main: #fdf4f5;
+$color-pink: #e8a0bf;
+$color-purple: #ba90c6;
+$color-blue: #c0dbea;
+
+%button {
+  padding: 0.5rem 1rem;
+    border: 2px solid $color-pink;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: $color-blue;
+    transition: all ease-in-out 0.2s;
+
+    &:hover:enabled {
+      cursor: pointer;
+      background-color: $color-pink;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+}
